@@ -1,0 +1,149 @@
+<html>
+<head>
+
+
+
+</head>
+<body>
+
+<style>
+#notetrack {
+    position: absolute
+    left: 00px;
+    top: 0px;
+}
+
+#tuner{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+</style>
+
+
+<table border="0">
+	
+	<td>
+		<canvas id="tuner" width="500" height="250"></canvas>
+		<canvas id="notetrack" width="500" height="500" style="border:1px solid #000000;"></canvas>
+	</td>
+	<td>
+	<table border="0">
+		<tr>
+			<td>
+				BPM
+					<input type="number" id="tempo" value="120">
+		
+
+			
+				</td>
+				</tr>
+		
+				<tr><td>
+					Click Volume: <input id = "click_volume" type="range" name="volume" min="0" max="10"><br>
+				Grid Interval:	
+					<canvas id="sixteen" width="20" height="20" style="border:1px solid #000000"></canvas>
+					<canvas id="eighth" width="20" height="20" style="border:1px solid #000000"></canvas>
+					<canvas id="quarter" width="20" height="20" style="border:1px solid #000000"></canvas>
+
+				</td></tr>
+				<tr><td>
+						<canvas id="click" width="100" height="50"></canvas>
+				</td></tr>	
+				<tr>
+						<font size="8" face = "sans-serif" color="black">
+					<td>Most Likely Key:
+						<font color="green">
+					<text id="mostlikely">	
+					<font size = "3" face = "sans-serif" color="black">
+				</text>
+					<br>
+					Choose Key:	
+					<select id="note">					
+					  <option value="c">C</option>
+					  <option value="c#">C#</option>
+					  <option value="d">D</option>
+					  <option value="d#">D#</option>
+					  <option value="e">E</option>
+					  <option value="e#">E#</option>
+					  <option value="f">F</option>
+					  <option value="f#">F#</option>
+					  <option value="g">G</option>
+					  <option value="g#">G#</option>
+					  <option value="a">A</option>
+					  <option value="a#">A#</option>
+					  <option value="b">B</option>
+					</select>
+					<select id="mode">					
+					  <option value="major">Major</option>
+					  <option value="minor">Minor</option>
+					  <option value="dorian">Dorian</option>
+					  <option value="phrygian">Phrygian</option>
+					  <option value="lydian">Lydian</option>
+					  <option value="mixolydian">Mixolydian</option>
+					  <option value="locrian">Locrian</option>
+					</select>
+				<div id="current"></div>
+				<canvas id="toMidi" width="100" height="50"></canvas>
+					<select id="which">					
+					  <option value="midinotes">original</option>
+					  <option value="secondarymidi">key changed</option>
+					 </select> 
+						
+
+				<canvas id="disp" width="1000" height="100" style="border:0px solid #000000;"></canvas>
+
+			</td>
+			</tr>
+		</td>
+
+	<canvas id="play" width="1000" height="100" style="border:0px solid #000000;"></canvas>
+
+	</td>
+</table>
+
+</table>
+	</body>
+
+	</html>
+
+	<script src="MIDImaster/inc/shim/Base64.js" type="text/javascript"></script>
+	<script src="MIDImaster/inc/shim/Base64binary.js" type="text/javascript"></script>
+	<script src="MIDImaster/inc/shim/WebAudioAPI.js" type="text/javascript"></script>
+	<script src="MIDImaster/inc/shim/WebMIDIAPI.js" type="text/javascript"></script>
+	<!-- jasmid package -->
+	<script src="MIDImaster/inc/jasmid/stream.js"></script>
+	<script src="MIDImaster/inc/jasmid/midifile.js"></script>
+	<script src="MIDImaster/inc/jasmid/replayer.js"></script>
+	<!-- midi.js package -->
+	<script src="MIDImaster/js/midi/audioDetect.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/midi/plugin.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/midi/player.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/midi/synesthesia.js" type="text/javascript"></script>
+	<!-- color.js package -->
+	<script src="MIDImaster/js/color/spaceW3.js" type="text/javascript"></script>
+	<!-- loader.js package -->
+	<script src="MIDImaster/js/widget/loader.js" type="text/javascript"></script>
+	<!-- utils -->
+	<script src="MIDImaster/js/util/dom_request_xhr.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/util/dom_request_script.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/util/event.js" type="text/javascript"></script>
+	<script src="MIDImaster/js/util/queue.js" type="text/javascript"></script>
+	<!-- teoria -->
+	<script src="teoria-master/dist/teoria.js"></script>
+	<!-- custom scripts -->
+	<script src="maths.js"></script>
+	<script src="midiplayback.js"></script>
+	<script src="data.js"></script>
+	<script src="keyfinder.js"></script>
+	<script src="control.js"></script>
+	<script src="metronome.js"></script>
+	<script src="display.js"></script>
+	<!-- yin alg used for tuner -->
+	<script src="yin.js"></script>
+	<!-- more custom scripts/ midi.js  -->
+	<script src="tuner.js"></script>
+	<script src="midi.js"></script>
+	<script src="keychanger.js"></script>
+
+
