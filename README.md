@@ -12,3 +12,5 @@ Info for console and code:
 + after mididata is recorded 'midinotes' = the array of midinotes in letter form for each grid point
 + 'mididata' = the corresponding array of midinotes in number form
 + after a keychange has taken place secondarymidi and secondarynumbers correspond to these arrays
+
+Keep in mind this is based on the awful javascript clock.  I plan on recreating this based on post analysis of audio buffers and accurate digital clocking
